@@ -93,6 +93,11 @@ void ised_win::accept()
 
 void ised_win::onBtnPressed()
 {
+// Память не может быть read
+//    if (ndlg != nullptr)
+//    {
+//        delete ndlg;
+//    } // TO DO Добавить возможность повторного нажатия
     ndlg = new QDialog(this);
     ndlg->setModal(false);
     ndlg->resize(320, 240);
@@ -107,7 +112,7 @@ void ised_win::onBtnPressed()
     }
     ndlg->setLayout(l);
     ndlg->show();
-}
+}//onBtnPressed
 
 int ised_win::calc()
 {
