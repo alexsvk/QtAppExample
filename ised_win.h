@@ -23,14 +23,17 @@ public:
 
     ised_win(QWidget *parent = 0);
     ~ised_win();
+
+    void calculateCountofWidgetsAsync();
+
 public Q_SLOTS:
     void accept();//scp
     void onBtnPressed();
-    //void reject
 
 private:
     int calc();
 private:
+    int m_countOfWidgets;
     QWidget m_w;
     QLineEdit* m_edit;
     QVBoxLayout *vbox;
